@@ -1,6 +1,6 @@
 # Optimization of Airfoil Design
 ## Background 
-In my pursuit of teaching myself aerospace topics, I came across airfoils in the context of lift and drag. An airfoil is a 2D cross-section of a curved flight geometry, most commonly a wing, that is deisgn n to generate lift and allow a vehicle to interact with the air. Although a seemingly simple concept, the question of how to design the curvature of this geometery for optimal lift to drag ratio presents an interesting optimization problem. Realistically this problem is more convoluted, as maximzing lift to drag can hae a negative impact on stability and speed performance. However as a beginner in this subject it is my goal of this project to simply maximize the lift to drag ratio.
+In my pursuit of teaching myself aerospace topics, I came across airfoils in the context of lift and drag. An airfoil is a 2D cross-section of a curved flight surface—most commonly a wing—designed to generate lift and allow a vehicle to interact with the air. Although seemingly simple, the question of how to design the curvature of this geometry for optimal lift-to-drag ratio presents an interesting optimization problem. Realistically, this problem is more complex, as maximizing lift-to-drag can negatively impact stability and speed performance. However, as a beginner in this subject, the goal of this project is simply to maximize the lift-to-drag ratio.
 
 
 ## Supporting Software
