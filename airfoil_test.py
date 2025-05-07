@@ -14,7 +14,7 @@ PSAV
 naca2412_coords.dat
 PANE
 OPER
-VISC {visc}n
+VISC {visc}
 CPWR
 cp_data.txt
 PACC
