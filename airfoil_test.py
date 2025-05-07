@@ -8,13 +8,13 @@ def clean_slate():
         os.remove("polar.txt")
 
 def run_xfoil_script(airfoil="2412", visc="1000000", aoa_start="0", aoa_end="12", aoa_step="1"):
-    xfoil_commands = """
+    xfoil_commands = f"""
 NACA {airfoil}
 PSAV
 naca2412_coords.dat
 PANE
 OPER
-VISC {visc}
+VISC {visc}n
 CPWR
 cp_data.txt
 PACC
@@ -60,16 +60,12 @@ def plot_polar(filename='polar.txt'):
                     except ValueError:
                         continue  # Skip malformed lines
 
-    if len(alpha) == 0:
-        print("❌ No data extracted from polar.txt.")
-        return
-
-    print(f"✅ Parsed {len(alpha)} entries.")
     plt.figure(figsize=(8, 5))
     plt.plot(alpha, cl, marker='o', label='Cl vs AoA')
+    plt.plot(alpha, cd, marker='o', label='Cd vs AoA')
     plt.xlabel('Angle of Attack (°)')
-    plt.ylabel('Lift Coefficient (Cl)')
-    plt.title('Lift Curve - NACA 2412')
+    plt.ylabel('Coefficent')
+    plt.title('Lift/Drag Curve')
     plt.grid(True)
     plt.legend()
     plt.show()
@@ -152,11 +148,10 @@ def vortex_panel_plot(filename, alpha_deg):
     plt.legend()
     plt.show()
 
-# Example usage (run after saving airfoil coords from XFOIL)
 
 
 if __name__=="__main__":
     clean_slate()
-    run_xfoil_script()
+    run_xfoil_script(airfoil="2412", visc="1000000", aoa_start="0", aoa_end="12", aoa_step="1")
     plot_polar()
-    vortex_panel_plot("naca2412_coords.dat", alpha_deg=5)
+    # vortex_panel_plot("naca2412_coords.dat", alpha_deg=5)
