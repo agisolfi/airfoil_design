@@ -3,6 +3,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
+"""
+
+EXPERIMENTING WITH XFOIL AND AIRFOILS
+
+NOT FOR OPTIMZATION USE
+
+"""
 def clean_slate():
     if os.path.exists("polar.txt"):
         os.remove("polar.txt")
