@@ -10,11 +10,14 @@ In order to simulate airfoil shape and simulation, I will be using a free open s
 
 ## Airfoil Naming Convention
 One way to label Airfoils is using the NACA naming convention. Specifically in this project we will be using the 4 Digit NACA naming convention which works as follows:
-First Digit = Max Camber in percent of chord length
-Second Digit = Position along airfoil where the max camber is located (also in percentage of chord length)
-Third and Fourth Digit = Percent maximum thickness of chord length
 
-Ex: NACA 2421 has a max camber of 2%, which is positioned at 40% of the chord length, and has a max thickness of 21%.
+-**First Digit** = Max Camber in percent of chord length
+
+-**Second Digit** = Position along airfoil where the max camber is located (also in percentage of chord length)
+
+-**Third and Fourth Digit** = Percent maximum thickness of chord length
+
+**Example**: NACA 2421 has a max camber of 2%, which is positioned at 40% of the chord length, and has a max thickness of 21%.
 
 ## Process
 In this optimization problem, Camber values between 0-9 %, Position values between 0-90%, and Thicknesses of 10-40 % were tested to find the airfoil which produces the highest Lift to Drag ratio. A constant Angle of Attack of 6 degrees and a Reynolds number of 1,000,000 were selected for this problem. A python script was created to automate the XFOIL simulations and create plots of the 5 best preforming airfoils for presentation.
