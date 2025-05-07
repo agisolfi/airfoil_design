@@ -18,7 +18,7 @@ QUIT
 
     # Start the XFOIL subprocess
     process = subprocess.run(
-        ['xfoil.exe'],  # or './xfoil' on Linux/Mac
+        ['xfoil.exe'], 
         input=xfoil_commands,
         text=True,
         stdout=subprocess.PIPE,
